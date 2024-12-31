@@ -8,10 +8,23 @@
  See https://swift.org/CONTRIBUTORS.txt for Swift project authors
 */
 
+#ifndef CATOMIC_H
+#define CATOMIC_H
+
 #include <stdint.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /// The current unique atomic identifier.
 uint64_t _cmarkup_current_unique_id(void);
 
 /// Increment the current unique identifier atomically and return it.
 uint64_t _cmarkup_increment_and_get_unique_id(void);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* CATOMIC_H */

@@ -12,7 +12,7 @@
 
 #ifdef __cplusplus
 #include <atomic>
-static std::atomic<uint64_t> _cmarkup_unique_id{0};
+static std::atomic<uint64_t> _cmarkup_unique_id(0);
 #else
 static _Atomic uint64_t _cmarkup_unique_id = 0;
 #endif
